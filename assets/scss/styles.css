@@ -1,0 +1,525 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/*========== Colors ==========*/
+/*========== Font and typography ==========*/
+/*========== Font weight ==========*/
+/*========== Margenes ==========*/
+/*========== z index ==========*/
+/*=============== BASE ===============*/
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 3rem 0 0 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.938rem;
+  background-color: white;
+  color: #565d56;
+  transition: 0.5s;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #252825;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+/*========== Button Dark/Light ==========*/
+.change-theme {
+  position: absolute;
+  right: 1.5rem;
+  top: 2.2rem;
+  color: #252825;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.dark-theme .footer {
+  background-color: #fff;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 4.5rem 0 1rem;
+}
+.section__title, .section__title-center {
+  font-size: 1.25rem;
+  color: #252825;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.svg__color {
+  fill: #69cc66;
+}
+.svg__blob {
+  fill: #c7ecc6;
+}
+.svg__img {
+  width: 300px;
+  justify-self: center;
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/*=============== HEADER ===============*/
+.header {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem 0;
+    width: 90%;
+    top: -100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: 0.4s;
+    border-radius: 2rem;
+    z-index: 100;
+  }
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+.nav__link, .nav__logo, .nav__toggle {
+  color: #252825;
+  font-weight: 600;
+}
+.nav__toggle {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Show menu */
+.show-menu {
+  top: calc(3rem + 1rem);
+}
+
+/* Active link */
+.active-link {
+  position: relative;
+}
+.active-link::before {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 45%;
+  width: 5px;
+  height: 5px;
+  background-color: #252825;
+  border-radius: 50%;
+}
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*=============== HOME ===============*/
+.home__container {
+  row-gap: 3rem;
+}
+.home__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.home__description {
+  margin-bottom: 2rem;
+}
+
+/*=============== BUTTONS ===============*/
+.button {
+  display: inline-block;
+  background-color: #69cc66;
+  color: #1A1A1A;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: #4fc34b;
+}
+.button__header {
+  display: none;
+}
+.button-link {
+  background: none;
+  padding: 0;
+  color: #252825;
+}
+.button-link:hover {
+  background-color: transparent;
+}
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  padding: 0.75rem 1rem;
+}
+.button__icon {
+  font-size: 1.5rem;
+}
+
+/*=============== ABOUT ===============*/
+.about__container {
+  gap: 2.5rem;
+}
+.about__data {
+  text-align: center;
+}
+
+/*=============== SECURITY ===============*/
+.security__container {
+  gap: 2.5rem;
+}
+.security__description {
+  text-align: center;
+}
+
+/*=============== SERVICES ===============*/
+.services__container {
+  padding-top: 1rem;
+}
+.services__data {
+  display: grid;
+  row-gap: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(3, 77, 0, 0.15);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.services__img {
+  width: 135px;
+  justify-self: center;
+  margin-bottom: 0.5rem;
+}
+
+/*=============== APP ===============*/
+.app__container {
+  gap: 2.5rem;
+}
+.app__data {
+  text-align: center;
+}
+.app__description {
+  margin-bottom: 1.5rem;
+}
+.app__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/*=============== CONTACT ===============*/
+.contact__container {
+  padding-bottom: 3rem;
+}
+.contact__description {
+  text-align: center;
+}
+.contact__content {
+  row-gap: 0.75rem;
+}
+.contact__address {
+  font-size: 0.813rem;
+  font-weight: 600;
+  color: #252825;
+}
+.contact__information {
+  font-weight: initial;
+  color: #565d56;
+}
+
+/*=============== FOOTER ===============*/
+.footer {
+  background-color: #b4e6b3;
+  padding-bottom: 2rem;
+}
+.footer__container {
+  row-gap: 2rem;
+}
+.footer__logo, .footer__title {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+}
+.footer__logo {
+  display: inline-block;
+  font-weight: 600;
+  color: #252825;
+}
+.footer__description, .footer__link {
+  font-size: 0.813rem;
+}
+.footer__links {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.footer__link {
+  color: #252825;
+}
+.footer__social {
+  display: flex;
+  column-gap: 1.5rem;
+}
+.footer__social-link {
+  font-size: 1.25rem;
+  color: #252825;
+}
+.footer__copy {
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #565d56;
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  background: #69cc66;
+  right: 1rem;
+  bottom: -20%;
+  display: inline-flex;
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  z-index: 10;
+  opacity: 0.8;
+  transition: 0.4s;
+}
+.scrollup:hover {
+  background-color: #69cc66;
+  opacity: 1;
+}
+.scrollup__icon {
+  font-size: 1.25rem;
+  color: #252825;
+}
+
+/* Show Scroll Up*/
+.show-scroll {
+  bottom: 3rem;
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: #d7dad7;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #bdc2bd;
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a2a9a2;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+@media screen and (max-width: 360px) {
+  .svg__img {
+    width: 100%;
+  }
+
+  .section {
+    padding: 3.5rem 0 1rem;
+  }
+
+  .services__img {
+    width: 100px;
+  }
+
+  .app__buttons {
+    grid-template-columns: max-content;
+  }
+}
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .svg__img {
+    width: 100%;
+  }
+
+  .section__title-center {
+    text-align: initial;
+  }
+
+  .home__container,
+.about__container,
+.security__container,
+.services__container,
+.app__container,
+.contact__container,
+.footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home__img {
+    order: 1;
+  }
+
+  .home__container,
+.about__container,
+.security__container,
+.app__container,
+.contact__container {
+    align-items: center;
+  }
+
+  .about__data,
+.security__data,
+.app__data,
+.contact__description {
+    text-align: initial;
+  }
+
+  .about__img,
+.app__img {
+    order: -1;
+  }
+}
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding: 6rem 0 2rem;
+  }
+
+  .nav {
+    height: calc(3rem + 1.5rem);
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 2.5rem;
+  }
+  .nav__toggle {
+    display: none;
+  }
+
+  .change-theme {
+    position: initial;
+  }
+
+  .home__container {
+    padding: 6rem 0 2rem;
+  }
+
+  .app__buttons {
+    justify-content: initial;
+  }
+}
+/* For large devices */
+@media screen and (min-width: 968px) {
+  .button__header {
+    display: block;
+  }
+
+  .svg__img {
+    width: 470px;
+  }
+
+  .about__container,
+.security__container,
+.app__container,
+.contact__container {
+    column-gap: 6rem;
+  }
+
+  .services__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact__container {
+    grid-template-columns: 3fr 1.5fr 1.25fr;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .footer__social {
+    align-items: flex-start;
+  }
+  .footer__social-link {
+    font-size: 1.45rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home__img {
+    width: 540px;
+  }
+  .home__description {
+    padding-right: 5rem;
+  }
+
+  .footer__container {
+    column-gap: 3rem;
+  }
+
+  .scrollup {
+    right: 2rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
